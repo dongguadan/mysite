@@ -69,6 +69,15 @@ TEMPLATES = [
     },
 ]
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/var/www/static/',
+]
+
+STATIC_ROOT = "/var/www/temp/static/"
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
