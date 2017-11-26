@@ -18,4 +18,6 @@ def post_detail(request, pk):
     post = Post.objects.get(pk=pk)
     return render_to_response('post.html', {'post': post})
 
-
+def timelines(request):
+    post_list = Post.objects.all()
+    return render_to_response('timelines.html',{'post_list':post_list})

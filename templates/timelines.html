@@ -1,0 +1,32 @@
+{% extends "base_site.html" %}
+
+{% block sidebar %}
+  <div class="sidebar">
+    <div class="well">
+      <h4>最新时间线</h4>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+  <div class="timelines">
+    {% for post in post_list %}
+    <div class="timeline">
+      <div class="pic">
+        <img src="{{ post.photo }}"/>
+      </div>
+      <div class="info">
+        <h3> <a>{{post.title}}</a> </h3>
+        <div class="extinfo">
+          <span>事件: 0</span>
+          <span>浏览: 0</span>
+          <span>回复: 0</span>
+          <span>创建: {{ post.created_at|date:"Y-m-d H:i"}}</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
