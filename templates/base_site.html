@@ -75,8 +75,6 @@
       {% endblock %}
 
       {% block content %}
-        <div class="content">
-        </div>
       {% endblock %}
 
     </div>
@@ -86,9 +84,6 @@
     <footer>
       <div class="container">
         <p class="adicons"> 
-          <a href="http://www.djangoproject.com/" target="_blank">
-            <img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" border="0" alt="A Django site." title="A Django site." />
-          </a>
         </p>
         <p class="lks">
           <a>关于</a>
@@ -106,17 +101,4 @@
 {% endblock %}        
 
 {% block footer_ext %}
-  {{ block.super }}
-  {% if unread_message_count %}
-    <script type="text/javascript">
-      var nav_msg = $('#nav_msg');
-      setInterval(function(){
-        if (nav_msg.hasClass('have-new-msg')) {
-          nav_msg.removeClass('have-new-msg');
-        } else {
-          nav_msg.addClass('have-new-msg');
-        }
-      }, 600);
-    </script> 
-  {% endif %} 
 {% endblock %}        

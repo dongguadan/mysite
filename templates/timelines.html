@@ -1,15 +1,7 @@
 {% extends "base_site.html" %}
 
-{% block sidebar %}
-  <div class="sidebar">
-    <div class="well">
-      <h4>最新时间线</h4>
-    </div>
-  </div>
-{% endblock %}
 
 {% block content %}
-<div class="content">
   <div class="timelines">
     {% for post in post_list %}
     <div class="timeline">
@@ -28,5 +20,4 @@
     </div>
     {% endfor %}
   </div>
-</div>
 {% endblock %}
