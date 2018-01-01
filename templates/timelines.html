@@ -2,11 +2,10 @@
 
 
 {% block content %}
-  <div class="timelines">
     {% for post in post_list %}
     <div class="timeline">
       <div class="pic">
-        <img src="{{ post.photo }}" height="100" width="120"/>
+        <img src="{{ post.photo }}" height="100" width="140"/>
       </div>
       <div class="info">
         <h3> <a>{{post.title}}</a> </h3>
@@ -19,5 +18,4 @@
       </div>
     </div>
     {% endfor %}
-  </div>
 {% endblock %}
