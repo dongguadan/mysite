@@ -25,7 +25,7 @@ SECRET_KEY = '7za)u&+r&jhgo$(57sjba^ty!@#17ckd#kbnrv=me3+f-wq-vt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,14 +69,6 @@ TEMPLATES = [
     },
 ]
 
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
-
-STATIC_ROOT = "/var/www/temp/static/"
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
